@@ -7,7 +7,7 @@ type Props = {
     children: JSX.Element
 }
 
-const ContentListLayout = ({ children }:Props) => {
+const MainLayout = ({ children }:Props) => {
     return(
         <Layout>
             {children}
@@ -15,4 +15,4 @@ const ContentListLayout = ({ children }:Props) => {
     );
 };
 
-export default ContentListLayout;
+export default MainLayout;

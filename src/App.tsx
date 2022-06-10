@@ -1,23 +1,35 @@
-import React from 'react';
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
-function App() {
+import Content from "@Pages/Content";
+import Main from "@Pages/Main";
+import Mypage from "@Pages/Mypage";
+
+const pageList = [
+  {
+    path: "/",
+    component: Main,
+  },
+  {
+    path: "/content",
+    component: Content,
+  },
+  {
+    path: "/mypage",
+    component: Mypage,
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {pageList.map((item) => (
+          <Route path={item.path} element={item.component()} />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
