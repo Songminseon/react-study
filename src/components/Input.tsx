@@ -1,12 +1,10 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 
-const CustomInput = styled.input``
+const CustomInput = styled.input``;
 
 const Input = () => {
-    return(
-        <CustomInput />
-    )
+  return <CustomInput />;
 };
 
 export default Input;

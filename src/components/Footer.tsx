@@ -1,6 +1,7 @@
-import { COLORS } from '@Constants/colors';
 import React from 'react';
 import styled from 'styled-components';
+
+import { COLORS } from '@Constants/colors';
 
 const FooterWrapper = styled.div`
   width: 100%;

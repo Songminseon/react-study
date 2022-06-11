@@ -29,6 +29,10 @@ const pageList = [
     path: '/mypage',
     component: Mypage,
   },
+  {
+    path: '*',
+    component: Main,
+  },
 ];
 
 const App = () => {
