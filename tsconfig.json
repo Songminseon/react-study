@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es5",  // es3,5, 2016등 있는데 브라우저 호환성 고려하여 es5
     "lib": [
       "dom",
       "dom.iterable",
@@ -13,15 +13,20 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "esnext", // import관련 문법
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx", // tsx파일을 어떻게 jsx로 컴파일
+    "noImplicitAny": true, //any타입 금지 여부
+    "strictNullChecks": true, //null, undefined 타입에 이상한 짓 할시 에러내기 
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ],
   "extends": "./tsconfig.paths.json"
 }

@@ -1,21 +1,21 @@
-import React from "react";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import Content from "@Pages/Content";
-import Main from "@Pages/Main";
-import Mypage from "@Pages/Mypage";
+import Content from '@Pages/Content';
+import Main from '@Pages/Main';
+import Mypage from '@Pages/Mypage';
 
 const pageList = [
   {
-    path: "/",
+    path: '/',
     component: Main,
   },
   {
-    path: "/content",
+    path: '/content',
     component: Content,
   },
   {
-    path: "/mypage",
+    path: '/mypage',
     component: Mypage,
   },
 ];
@@ -24,8 +24,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {pageList.map((item) => (
-          <Route path={item.path} element={item.component()} />
+        {pageList.map(item => (
+          <Route key={item.path} path={item.path} element={item.component()} />
         ))}
       </Routes>
     </BrowserRouter>
