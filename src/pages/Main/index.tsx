@@ -1,10 +1,11 @@
 import React from 'react';
+import MainLayout from '@Layouts/MainLayout';
 
 const Index = () => {
   return (
-    <div>
-      <p>main page</p>
-    </div>
+    <MainLayout>
+      <p>Main pasge</p>
+    </MainLayout>
   );
 };
 
