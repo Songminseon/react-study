@@ -10,5 +10,8 @@ module.exports = override(
     '@Layouts': path.resolve(__dirname, 'src/layouts'),
     '@Pages': path.resolve(__dirname, 'src/pages'),
     '@Utils': path.resolve(__dirname, 'src/utils'),
+    '@Actions': path.resolve(__dirname, 'src/actions'),
+    '@Reducers': path.resolve(__dirname, 'src/reducers'),
+    '@Hooks': path.resolve(__dirname, 'src/hooks'),
   })
 );

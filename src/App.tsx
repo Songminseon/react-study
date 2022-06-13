@@ -7,13 +7,16 @@ import Main from '@Pages/Main';
 import Mypage from '@Pages/Mypage';
 
 const GlobalStyle = createGlobalStyle`
-  html {
+  * {
     font-family: 'Noto Sans KR', sans-serif;
+  }
+  html {
     overflow: auto;
   }
   body {
     margin: 0;
   }
+
 `;
 
 const pageList = [

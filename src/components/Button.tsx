@@ -3,10 +3,15 @@ import styled from 'styled-components';
 
 const CustomButton = styled.button``;
 
-const Button = () => {
+interface Props {
+  name: string;
+  onClick: () => void;
+}
+
+const Button = ({ name, onClick }: Props) => {
   return (
-    <CustomButton>
-      <span>button</span>
+    <CustomButton onClick={onClick}>
+      <span>{name}</span>
     </CustomButton>
   );
 };

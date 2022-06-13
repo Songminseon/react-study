@@ -19,6 +19,15 @@
         ],
         "@Utils/*": [
           "src/utils/*"
+        ],
+        "@Reducers/*": [
+          "src/reducers/*"
+        ],
+        "@Actions/*": [
+          "src/actions/*"
+        ],
+        "@Hooks/*": [
+          "src/hooks/*"
         ]
       }
     }
