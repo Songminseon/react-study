@@ -49,7 +49,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Navigaiton = () => {
+const Navigation = () => {
   const router = useInternalRouter();
   const dispatch = useDispatch();
   const auth = useSelector((state: any) => state.authReducer);
@@ -100,4 +100,4 @@ const Navigaiton = () => {
   );
 };
 
-export default Navigaiton;
+export default Navigation;
