@@ -1,12 +1,12 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import Logo from './Logo';
+import Input from './Input';
 
 export default {
-  title: 'components/Logo',
-  component: Logo,
+  title: 'components/Input',
+  component: Input,
 };
 
-const Template: Story = args => <Logo {...args} />;
+const Template: Story = args => <Input {...args} />;
 
 export const Default = Template.bind({});
