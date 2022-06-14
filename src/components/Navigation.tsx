@@ -12,8 +12,6 @@ import Search from '@Components/Search';
 
 import { useInternalRouter } from '@Hooks/routing';
 
-import { COLORS } from '@Constants/colors';
-
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -30,17 +28,7 @@ const Wrapper = styled.div`
   }
 
   li {
-    margin-right: 16px;
     list-style: none;
-  }
-
-  button {
-    cursor: pointer;
-    border: none;
-    background-color: white;
-    color: ${COLORS.grey_7e};
-    font-size: 15px;
-    font-weight: 500;
   }
 
   .search-wrapper {
@@ -73,13 +61,12 @@ const Navigation = () => {
       <Link to={'/'}>
         <Logo />
       </Link>
-
       <ul>
         <li>
-          <button onClick={() => moveRouter('/?domain=movie')}>영화</button>
+          <Button name={'영화'} onClick={() => moveRouter('/?domain=movie')} />
         </li>
         <li>
-          <button onClick={() => moveRouter('/?domain=tv')}>TV</button>
+          <Button name={'TV'} onClick={() => moveRouter('/?domain=tv')} />
         </li>
       </ul>
       <div className="search-wrapper">
@@ -93,7 +80,7 @@ const Navigation = () => {
       ) : (
         <>
           <Button name={'로그인'} onClick={onClickLogin} />
-          <Button name={'회원가입'} onClick={() => dispatch(updateUser())} />
+          <Button name={'회원가입'} onClick={() => dispatch(updateUser())} type="border" />
         </>
       )}
     </Wrapper>
