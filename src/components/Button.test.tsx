@@ -1,9 +1,13 @@
 import React from 'react';
 import { waitFor, fireEvent, render, screen, cleanup } from '@testing-library/react';
 
-import Button from '@Components/Button';
+import Button from './Button';
 
-test('button 테스2트', () => {
+afterEach(() => {
+  cleanup();
+});
+
+test('button 테스트', () => {
   const buttonName = 'test';
   const onClick = jest.fn();
   render(<Button name={buttonName} onClick={onClick} />);

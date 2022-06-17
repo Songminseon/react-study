@@ -2,7 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import Content from '@Pages/Content';
+import Content from '@Pages/ContentDetail';
 import Main from '@Pages/Main';
 import Mypage from '@Pages/Mypage';
 

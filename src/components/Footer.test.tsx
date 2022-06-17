@@ -7,6 +7,7 @@ afterEach(() => {
   cleanup();
 });
 
-test('footer 테스s트', () => {
+test('footer 테스트', () => {
   render(<Footer />);
+  expect(screen.getByText('대표 송민선')).toBeInTheDocument();
 });

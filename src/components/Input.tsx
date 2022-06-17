@@ -5,6 +5,8 @@ const CustomInput = styled.input`
   background-color: rgb(245, 245, 245);
   border: none;
   border-radius: 5px;
+  width: 100%;
+  padding: 0px;
 
   &::placeholder {
     color: white;

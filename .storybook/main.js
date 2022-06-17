@@ -13,7 +13,6 @@ module.exports = {
     builder: '@storybook/builder-webpack5',
   },
   webpackFinal: async config => {
-    // 👈 and add this here
     config.resolve.alias = {
       ...config.resolve.alias,
       '@Assets': path.resolve(__dirname, '../src/assets'),

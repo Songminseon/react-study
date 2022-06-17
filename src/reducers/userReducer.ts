@@ -15,6 +15,7 @@ const userReducer = (state = initState, action: any) => {
         name: '',
         imgUrl: '',
       };
+
     default:
       return state;
   }
