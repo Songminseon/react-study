@@ -26,12 +26,13 @@ module.exports = {
   rules: {
     // 규칙지정
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'no-unused-expressions': 'off',
+    '@typescript-eslint/no-unused-expressions': 'error',
     'no-implicit-coercion': 'error',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'no-extra-boolean-cast': 'off',
-
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
