@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import styled from 'styled-components';
 import queryString from 'query-string';
 import { useQuery } from 'react-query';
@@ -38,19 +38,11 @@ const ContentWrapper = styled.div`
 const ContentList = () => {
   const { domain } = queryString.parse(window.location.search);
 
-  const { isLoading, error, data } = useQuery('contents', () =>
-    axios.get('http://localhost:5000/api/home/movie').then(res => res.data)
-  );
+  const { data } = useQuery('contents', () => axios.get('http://localhost:5000/api/home/movie').then(res => res.data), {
+    suspense: true,
+  });
 
   const result = data?.result.result;
-
-  if (isLoading) {
-    return <ContentSkeleton />;
-  }
-
-  if (error) {
-    return <span>fucking error</span>;
-  }
 
   return (
     <Wrapper>

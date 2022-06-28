@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import MainLayout from '@Layouts/MainLayout';
 import ContentList from './components/ContentList';
+import ContentSkeleton from './components/ContentSkeleton';
+import ErrorBoundary from '@Components/ErrorBoundary';
 
 const Index = () => {
   return (
     <MainLayout>
-      <ContentList />
+      <Suspense fallback={<ContentSkeleton />}>
+        <ErrorBoundary>
+          <ContentList />
+        </ErrorBoundary>
+      </Suspense>
     </MainLayout>
   );
 };
