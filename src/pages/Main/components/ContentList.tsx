@@ -1,11 +1,11 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import queryString from 'query-string';
 import { useQuery } from 'react-query';
 import axios from 'axios';
+
 import ContentCard from './ContentCard';
 import Header from '@Components/Header';
-import ContentSkeleton from './ContentSkeleton';
 
 const Wrapper = styled.div`
   h1 {
